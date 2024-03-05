@@ -1,0 +1,30 @@
+.app {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  position: relative;
+}
+
+.page {
+  background-color: var(--bg-color);
+  padding: 0 2rem;
+}
+
+.burger__menu {
+  font-size: 2rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .page {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+  }
+
+  .burger__menu {
+    display: block;
+  }
+}

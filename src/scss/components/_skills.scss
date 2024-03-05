@@ -1,0 +1,55 @@
+.skills {
+  padding: 2rem 0;
+  h2 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  &__list {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    gap: 2rem;
+    padding: 1rem 0 0 0;
+  }
+
+  &__item {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px 0px var(--shadow-3),
+      -2px -2px 3px 0px var(--shadow-4);
+    background: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &:hover {
+      .skills__title {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 3px 0px var(--shadow-3),
+      -2px -2px 3px 0px var(--shadow-4);
+
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    display: none;
+    z-index: 100;
+  }
+}
