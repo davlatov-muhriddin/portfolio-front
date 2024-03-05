@@ -4,6 +4,7 @@ import { PiGithubLogoFill } from "react-icons/pi";
 import { FaChrome } from "react-icons/fa";
 import { TbBrandYoutubeFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import Loader from "../components/Loader";
 
 function Portfolio() {
   const [projects, setProjects] = useState([]);
@@ -26,7 +27,7 @@ function Portfolio() {
 
   return (
     <section className="portfolio">
-      {projects &&
+      {projects.length ? (
         projects.map((project) => (
           <div className="portfolio__card" key={project._id}>
             <div className="portfolio__card__front portfolio__card__side">
@@ -60,7 +61,10 @@ function Portfolio() {
               </Link>
             </div>
           </div>
-        ))}
+        ))
+      ) : (
+        <Loader />
+      )}
     </section>
   );
 }
